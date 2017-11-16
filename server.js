@@ -1,8 +1,8 @@
 var net = require('net');
 var utf8 = require('utf-8');
 
-var HOST = '127.0.0.1';
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+const HOST = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 var clients = [];
 
